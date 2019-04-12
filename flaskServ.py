@@ -4,7 +4,7 @@ from bson.json_util import dumps
 
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://jrz:jzsiggy77@ds027825.mlab.com:27825/camdb"
+app.config["MONGO_URI"] = "mongodb://<username>:<passwd>@ds027825.mlab.com:27825/camdb"
 mongo = PyMongo(app)
 
 '''class Cam:
