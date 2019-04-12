@@ -3,6 +3,7 @@ import random
 import time
 import requests
 import json
+import sys
 
 
 def randomize():
@@ -10,12 +11,16 @@ def randomize():
     return bool
 
 while True:
-    time.sleep(0.3)    
+    # time.sleep(0.1)    
     bool = randomize()
     for i in range(10):    
         bool = str(bool)   
-        payload = {'cam1': bool}          
-        r = requests.post('http://192.168.15.23:8080/cam', data=payload)
+        try:    
+            payload = {'cam0': bool}          
+            r = requests.post('http://127.0.0.1:8080/cam', data=payload)
+        except:
+            sys.exit(1)
+
         print(r.url)
         # print(r.text)
         print(bool)
