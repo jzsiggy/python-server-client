@@ -1,0 +1,8 @@
+body {
+    font-family: "arial";
+    font-weight: bold;
+}
+
+.navbar {
+    display: flexbox;
+}

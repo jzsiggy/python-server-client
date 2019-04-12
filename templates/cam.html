@@ -2,9 +2,14 @@
 <html>
     <head>
         <title> Camera Status </title>
-        <meta http-equiv="refresh" content="0.3" >
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
     <body>
-      <h1>{{ cam1_status }}</h1>
+      <p id="cam0">cam0: {{ cam0_status }}</p>
+      <script>
+          var int=self.setInterval('loadDoc()', 1000);
+      </script>
+      <script src="{{ url_for('static', filename='autoreload.js') }}"></script>
+
     </body>
 </html>
